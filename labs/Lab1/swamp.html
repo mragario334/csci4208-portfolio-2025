@@ -1,0 +1,29 @@
+<html> 
+    <head>
+        <title> Adventure Game </title>
+        <link rel="icon" href="assets/dragon-logo.png"/>
+    </head>
+
+    <body>
+        <h1> Swamp </h1>
+        <hr>
+        <img src='assets/swamp-hut.jpg' width="480">
+        <p> You come across a creepy witch hut in the swamp</p>
+        <h4> What do you want to do?</h4>
+        <ul>
+            <li> <a id='hut' href='hut.html'> Go into the hut</a></li>
+            <li><a id='gator' href='gator.html'> Search outside the hut</a></li>
+        </ul>
+        <hr>
+        <p>
+            <a id='exit' href="forest.html" >Go back</a>
+        </p>
+        <iframe src='inventory.html'     id=inventory height=100 width=125 ></iframe>
+        <script>
+            inventory.src += location.search;
+            hut.href += location.search; 
+            exit.href += location.search;
+            gator.href += location.search;
+        </script>
+    </body>
+</html>

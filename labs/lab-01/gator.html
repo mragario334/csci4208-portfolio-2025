@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title> Adventure Game </title>
+        <link rel="icon" href="assets/dragon-logo.png"/>
+    </head>
+    <body>
+        <h1> Outer Hut </h1>
+        <img src = 'assets/gator.jpg' width = "480"/>
+        <hr>
+        <p id="fightText"> You find a gator outside the hut. It looks hungry. What do you do?</p>
+        <div id='options'>
+            <button id='fight' onclick='fight()'>Fight</button>
+            <a id='swamp' href='swamp.html'>
+                <button>Run Away</button>
+            </a>
+        </div>
+        <hr>
+        <iframe src='inventory.html' id=inventory height=100 width=125></iframe>
+
+        <script>
+             inventory.src += location.search;
+             swamp.href += location.search;
+
+             var queryString = new URLSearchParams(location.search);
+             var gatorHP = 2, gatorAP = 1;
+             var hp = +queryString.get('hp');
+             var ap = +queryString.get('ap');
+             var armor = +queryString.get('armor');
+             var gp = +queryString.get('gp');
+
+            function fight() {
+            gatorHP -= ap;
+             if (gatorHP <= 0) {
+                fightText.innerHTML = `You defeated the gator! You found 10 gold!`;
+                queryString.set('gp', gp + 10);
+                inventory.src = 'inventory.html?' + queryString;
+                options.innerHTML = `<a href='swamp.html?${queryString}'><button>Go back</button></a>`;
+                }
+            else {
+                armor -= gatorAP;
+                queryString.set('armor', armor);
+                inventory.src = 'inventory.html?' + queryString;
+                fightText.innerHTML = `You hit for ${ap} damage! Gator has ${gatorHP} HP left. <br> Gator hits you for ${gatorAP} damage! Your armor is now ${armor}.`;
+            }
+            if (armor <= 0) {
+                fightText.innerHTML = "You died.";
+                options.innerHTML = `<a href='index.html'><button>Game Over</button></a>`;
+            }
+        }
+         </script>
+    </body>
+</html>

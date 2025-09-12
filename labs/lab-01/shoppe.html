@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title> Adventure Game </title>
+        <link rel="icon" href="assets/dragon-logo.png"/>
+    </head>
+    <body>
+        <h1> Shoppe </h1> <hr>
+        <img src='assets/shop.gif' width="480"/>
+        <h4> What can I get for you? </h4>
+        <div>
+            <button onClick='food()'> Health &#128156; <br> <i> 1 gp </i></button>
+            <button onClick='weapon()'> Attack &#128481; <br> <i> 5 gp </i></button>
+            <button onClick='key()'> Key &#128273; <br> <i> 10 gp </i></button>
+        </div>
+        <div> <a id='exit' href='overworld.html'>Exit</a></div>
+        <hr>
+        <iframe src='inventory.html'     id=inventory height=100 width=125 ></iframe>
+        <script>
+            inventory.src += location.search;
+            exit.href += location.search;
+
+            var queryString = new URLSearchParams(location.search);
+            var gp = +queryString.get('gp');
+            var hp = +queryString.get('hp');
+            var ap = +queryString.get('ap');
+            var keys = +queryString.get('keys');
+
+            function food(){
+                if (gp > 0) {
+                    queryString.set('gp', --gp);
+                    queryString.set('hp', ++hp);
+                    location.search = queryString;
+                }
+            }
+
+            function weapon(){
+                if (gp >= 5) {
+                    queryString.set('gp', gp-5);
+                    queryString.set('ap', ++ap);
+                    location.search = queryString;
+                }
+            }
+
+            function key(){
+                if (gp >= 10) {
+                    queryString.set('gp', gp-10);
+                    queryString.set('hp', ++keys);
+                    location.search = queryString;
+                }
+            }
+        </script>
+    </body>
+    </html>

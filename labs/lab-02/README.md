@@ -11,9 +11,6 @@
 1. [Overview](#overview)
 2. [Goals / Features](#goals--features)
 3. [How to Run](#how-to-run)
-4. [Code Structure](#code-structure)
-5. [Next Steps / Improvements](#next-steps--improvements)
-6. [Notes](#notes)
 
 ---
 
@@ -62,10 +59,6 @@ It includes applying styles to HTML elements using:
 - Layouts with 1, 2, and 3 columns using CSS Grid
 
 ---
-
-## Demo / Screenshots
-> Screenshots of key sections
-
 
 ## How to Run
 1. Clone the repo:  

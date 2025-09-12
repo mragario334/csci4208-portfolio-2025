@@ -1,7 +1,7 @@
 # Proposal — capstone-01
 
 **Team repo:** [https://github.com/mragario334/AdvancedWebApps](https://github.com/mragario334/AdvancedWebApps)  
-**Project (v2) board:** [https://github.com/users/mragario334/projects/5](https://github.com/users/mragario334/projects/5)
+**Project (v2) board:** [https://github.com/users/mragario334/projects/6/views/1](https://github.com/users/mragario334/projects/6/views/1)
 
 ## Team Roster
 - Blake Tapie

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zombie Survival - Supermarket</title>
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header>
+  <h1>🧟 Zombie Survival</h1>
+  <button id="restart-btn" class="small-red-btn">Restart Game</button>
+  <table class="inventory-table">
+    <tr><th>Coins</th><th>Keys</th><th>Weapon Cards</th></tr>
+    <tr>
+      <td id="coins">0</td>
+      <td id="keys">0</td>
+      <td id="weaponCards">0</td>
+    </tr>
+  </table>
+</header>
+
+<main class="scene active">
+  <div class="intro-box">
+    <h2>Supermarket Chaos</h2>
+    <p id="description">Loading scene...</p>
+    <div class="choices" id="choices-container"></div>
+  </div>
+</main>
+
+<script>
+// Initialize inventory and flags
+if(!localStorage.getItem('coins')) localStorage.setItem('coins','0');
+if(!localStorage.getItem('keys')) localStorage.setItem('keys','0');
+if(!localStorage.getItem('weaponCards')) localStorage.setItem('weaponCards','0');
+if(!localStorage.getItem('supermarketUnlocked')) localStorage.setItem('supermarketUnlocked','false');
+if(!localStorage.getItem('supermarketCoinTaken')) localStorage.setItem('supermarketCoinTaken','false');
+if(!localStorage.getItem('supermarketWeaponTaken')) localStorage.setItem('supermarketWeaponTaken','false');
+
+function updateInventoryDisplay(){
+  document.getElementById('coins').textContent = localStorage.getItem('coins');
+  document.getElementById('keys').textContent = localStorage.getItem('keys');
+  document.getElementById('weaponCards').textContent = localStorage.getItem('weaponCards');
+}
+
+function gainItem(type, amount=1){
+  let current = parseInt(localStorage.getItem(type));
+  localStorage.setItem(type, current + amount);
+  updateInventoryDisplay();
+}
+
+function useItem(type, amount=1){
+  let current = parseInt(localStorage.getItem(type));
+  if(current >= amount) localStorage.setItem(type, current - amount);
+  updateInventoryDisplay();
+}
+
+function addChoice(text, href, onclickFunc=null){
+  const container = document.getElementById('choices-container');
+  const a = document.createElement('a');
+  a.href = href;
+  a.className = 'button';
+  a.textContent = text;
+  if(onclickFunc) a.onclick = onclickFunc;
+  container.appendChild(a);
+}
+
+// Restart button
+document.getElementById('restart-btn').onclick = function(){
+  localStorage.clear();
+  location.href="index.html";
+};
+
+window.onload = function(){
+  updateInventoryDisplay();
+  const container = document.getElementById('choices-container');
+  container.innerHTML = ""; // clear previous buttons
+  const description = document.getElementById('description');
+
+  // Use key only if supermarket not yet unlocked
+  if(localStorage.getItem('supermarketUnlocked') === 'false'){
+    let keys = parseInt(localStorage.getItem('keys'));
+    if(keys > 0){
+      useItem('keys',1);
+      localStorage.setItem('supermarketUnlocked','true');
+    } else {
+      description.textContent = "You need a key to enter the supermarket.";
+      addChoice("Return to the Streets", "scene2.html");
+      return;
+    }
+  }
+
+  // Scene description
+  description.textContent = "You enter the supermarket. Shelves are toppled, zombies roam the aisles. Outside, you spot two paths.";
+
+  // Hidden coin (30% chance)
+  if(localStorage.getItem('supermarketCoinTaken') === 'false' && Math.random() < 0.3){
+    addChoice("You find a hidden coin, you might need this! (+1 coin)", "scene3.html", function(){
+      gainItem('coins',1);
+      localStorage.setItem("supermarketCoinTaken","true");
+    });
+  }
+
+  // Weapon card (if not yet taken)
+  if(localStorage.getItem('supermarketWeaponTaken') === 'false'){
+    addChoice("Grab a weapon card (+1 Weapon Card)", "scene3.html", function(){
+      gainItem("weaponCards",1);
+      localStorage.setItem("supermarketWeaponTaken","true");
+    });
+  }
+
+  // Branching choices
+  addChoice("Go to the Parking Garage", "scene8.html");
+  addChoice("Return to the Streets", "scene2.html");
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zombie Survival - Helicopter Ending</title>
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header>
+  <h1>🧟 Zombie Survival</h1>
+  <button id="restart-btn" class="small-red-btn">Restart Game</button>
+  <table class="inventory-table">
+    <tr><th>Coins</th><th>Keys</th><th>Weapon Cards</th></tr>
+    <tr>
+      <td id="coins">0</td>
+      <td id="keys">0</td>
+      <td id="weaponCards">0</td>
+    </tr>
+  </table>
+</header>
+
+<main class="scene active">
+  <div class="intro-box" id="scene-text">
+    <h2>Helicopter</h2>
+    <p id="description"></p>
+    <div class="choices" id="choices-container"></div>
+  </div>
+</main>
+
+<script>
+// Restart button
+document.getElementById('restart-btn').onclick = function() {
+  localStorage.clear();
+  location.href = "index.html";
+};
+
+if(!localStorage.getItem('coins')) localStorage.setItem('coins','0');
+if(!localStorage.getItem('keys')) localStorage.setItem('keys','0');
+if(!localStorage.getItem('weaponCards')) localStorage.setItem('weaponCards','0');
+
+function showDeathScreen(message){
+  const container=document.getElementById('choices-container');
+  const sceneText=document.getElementById('scene-text');
+  document.getElementById('description').textContent = message;
+
+  const deathMsg = document.createElement('h1');
+  deathMsg.style.color="#f05c5c";
+  deathMsg.style.marginTop="20px";
+  deathMsg.textContent = "💀 YOU DIED 💀";
+  sceneText.appendChild(deathMsg);
+
+  const restartBtn = document.createElement('a');
+  restartBtn.href = "index.html";
+  restartBtn.className = "button";
+  restartBtn.textContent = "Restart Game";
+  restartBtn.onclick = function(){ localStorage.clear(); };
+  container.appendChild(restartBtn);
+}
+
+window.onload = function(){
+  const description = document.getElementById('description');
+  const container = document.getElementById('choices-container');
+  container.innerHTML = "";
+
+  description.textContent = "You climb into the helicopter, the rotors lift you off the pharmacy roof. You breathe a sigh of relief, thinking you're safe…";
+
+  description.innerHTML += "<br><br>Suddenly, a faint snarl comes from the co-pilot seat. You look over… your heart sinks. The helicopter isn’t empty.";
+
+  showDeathScreen("The infected had hidden in the helicopter! You are trapped with it as the blades slice through the air. There’s no escape.");
+};
+</script>
+</body>
+</html>

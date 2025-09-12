@@ -1,8 +1,8 @@
-# 🎓 Course Portfolio — <Blake>
+# 🎓 Course Portfolio — Blake Tapie
 
 > Personal progress page for CSCI4208. Keep this file updated as you complete labs, projects, and capstone milestones.
 
-- **Name:** <"Blake Tapie">
+- **Name:** Blake Tapie
 - **Project Board (Project v2):** <https://github.com/users/mragario334/projects/5/views/1>
 - **Live Portfolio (GitHub Pages):** <https://mragario334.github.io/REPO/>
 
@@ -100,6 +100,7 @@
 ---
 
 <sub>Last updated: <!-- yyyy-mm-dd --> </sub>
+
 
 
 

@@ -3,7 +3,7 @@
 > A demonstration of fundamental CSS concepts including selectors, colors, fonts, spacing, sizing, backgrounds, customization, flexbox, and grid layouts.
 
 **Author:** Blake  
-**Repo:** [GitHub Repo Link](https://github.com/mragario334/AdvancedWebApps)  
+**Repo:** [GitHub Repo Link](https://github.com/mragario334/csci4208-portfolio-2025)  
 
 ---
 

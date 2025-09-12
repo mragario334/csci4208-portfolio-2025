@@ -11,10 +11,7 @@
 1. [Overview](#overview)
 2. [Gameplay / Features](#gameplay--features)
 3. [How to Run](#how-to-run)
-4. [Code Structure](#code-structure)
 5. [Next Steps / Improvements](#next-steps--improvements)
-6. [Notes](#notes)
-
 ---
 
 ## Overview

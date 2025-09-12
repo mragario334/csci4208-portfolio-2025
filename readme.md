@@ -4,7 +4,7 @@
 
 - **Name:** Blake Tapie
 - **Project Board (Project v2):** <https://github.com/users/mragario334/projects/5/views/1>
-- **Live Portfolio (GitHub Pages):** <https://mragario334.github.io/REPO/>
+- **Live Portfolio (GitHub Pages):** <https://mragario334.github.io/csci4208-portfolio-2025/>
 
 ---
 
@@ -100,6 +100,7 @@
 ---
 
 <sub>Last updated: <!-- yyyy-mm-dd --> </sub>
+
 
 
 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zombie Survival - Quiet Streets</title>
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header>
+  <h1>🧟 Zombie Survival</h1>
+  <button id="restart-btn" class="small-red-btn">Restart</button>
+  <table class="inventory-table">
+    <tr><th>Coins</th><th>Keys</th><th>Weapon Cards</th></tr>
+    <tr>
+      <td id="coins">0</td>
+      <td id="keys">0</td>
+      <td id="weaponCards">0</td>
+    </tr>
+  </table>
+</header>
+
+<main class="scene active">
+  <div class="intro-box" id="scene-text">
+    <h2>The Quiet Streets</h2>
+    <p id="description"></p>
+    <div class="choices" id="choices-container"></div>
+  </div>
+</main>
+
+<script>
+// Restart button
+document.getElementById('restart-btn').onclick = function() {
+  localStorage.clear();
+  location.href = "index.html";
+};
+
+if(!localStorage.getItem('coins')) localStorage.setItem('coins','0');
+if(!localStorage.getItem('keys')) localStorage.setItem('keys','0');
+if(!localStorage.getItem('weaponCards')) localStorage.setItem('weaponCards','0');
+
+function updateInventoryDisplay() {
+  document.getElementById('coins').textContent = localStorage.getItem('coins');
+  document.getElementById('keys').textContent = localStorage.getItem('keys');
+  document.getElementById('weaponCards').textContent = localStorage.getItem('weaponCards');
+}
+
+function addChoice(text, href){
+  const container = document.getElementById('choices-container');
+  const a = document.createElement('a');
+  a.href = href;
+  a.className = "button";
+  a.textContent = text;
+  container.appendChild(a);
+}
+
+window.onload = function(){
+  updateInventoryDisplay();
+  const container = document.getElementById('choices-container');
+  container.innerHTML = "";
+  const description = document.getElementById('description');
+
+  description.textContent = "You enter a new area of the streets. It's eerily quiet… your heart pounds as you look around.";
+
+  const pharmacyLoot = localStorage.getItem('pharmacyLoot');
+
+  if(pharmacyLoot === 'antidote'){
+    // Good ending path
+    description.textContent += " You clutch the antidote you took from the pharmacy. There’s a laboratory nearby – this might be your chance to end the nightmare.";
+    addChoice("Head to the laboratory", "scene10.html");
+  } 
+  else if(pharmacyLoot === 'ladder'){
+    // Bad ending path
+    description.textContent += " You grabbed the ladder from the pharmacy. You see the top of the building – a helicopter awaits.";
+    addChoice("Climb to the top of the pharmacy", "scene11.html");
+  } 
+  else if(pharmacyLoot === 'coin'){
+    // Secret ending path
+    description.textContent += " You hold onto the gold coin. Up ahead, you notice a lone phone booth with a blinking light – maybe someone can help.";
+    addChoice("Enter the phone booth", "scene13.html");
+  } 
+  else {
+    // No loot taken, fallback
+    description.textContent += " You have nothing from the pharmacy. The streets remain quiet, but options are limited.";
+    addChoice("Return to the streets", "scene2.html");
+  }
+};
+</script>
+</body>
+</html>

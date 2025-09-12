@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zombie Survival - Subway Corner</title>
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header>
+  <h1>🧟 Zombie Survival</h1>
+  <button id="restart-btn" class="small-red-btn">Restart</button>
+  <table class="inventory-table">
+    <tr><th>Coins</th><th>Keys</th><th>Weapon Cards</th></tr>
+    <tr>
+      <td id="coins">0</td>
+      <td id="keys">0</td>
+      <td id="weaponCards">0</td>
+    </tr>
+  </table>
+</header>
+
+<main class="scene active">
+  <div class="intro-box">
+    <h2>Subway Corner</h2>
+    <p id="description">Loading scene...</p>
+    <div class="choices" id="choices-container"></div>
+  </div>
+</main>
+
+<script>
+// Restart button
+document.getElementById('restart-btn').onclick = function() {
+  localStorage.clear();
+  location.href = "index.html";
+};
+
+// Initialize storage if needed
+if(!localStorage.getItem('coins')) localStorage.setItem('coins','0');
+if(!localStorage.getItem('keys')) localStorage.setItem('keys','0');
+if(!localStorage.getItem('weaponCards')) localStorage.setItem('weaponCards','0');
+if(!localStorage.getItem('weaponCard')) localStorage.setItem('weaponCard','false');
+
+function updateInventoryDisplay() {
+  document.getElementById('coins').textContent = localStorage.getItem('coins');
+  document.getElementById('keys').textContent = localStorage.getItem('keys');
+  document.getElementById('weaponCards').textContent = localStorage.getItem('weaponCards');
+}
+
+function gainItem(type, amount=1){
+  let current=parseInt(localStorage.getItem(type));
+  localStorage.setItem(type, current+amount);
+  updateInventoryDisplay();
+}
+
+function addChoice(text, href, onclickFunc=null){
+  const container=document.getElementById('choices-container');
+  const a=document.createElement('a');
+  a.href=href;
+  a.className="button";
+  a.textContent=text;
+  if(onclickFunc) a.onclick=onclickFunc;
+  container.appendChild(a);
+}
+
+window.onload=function(){
+  updateInventoryDisplay();
+  const container=document.getElementById('choices-container');
+  const description=document.getElementById('description');
+  container.innerHTML="";
+
+  description.textContent = "You crouch in a dark corner of the subway. Groans echo around you. You see some supplies partially hidden behind crates.";
+
+  // Add choices: grab coin or weapon card if available
+  const gotCoin = localStorage.getItem('subwayCoinTaken') === 'true';
+  const gotWeapon = localStorage.getItem('subwayWeaponTaken') === 'true';
+
+  if(!gotCoin){
+    addChoice("Grab a hidden coin (+1 coin)", "scene2.html", function(){
+      gainItem("coins",1);
+      localStorage.setItem("subwayCoinTaken","true");
+    });
+  }
+
+  // Always allow going back to streets
+  addChoice("Return to the streets", "scene2.html");
+};
+</script>
+</body>
+</html>

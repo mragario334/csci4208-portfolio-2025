@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zombie Survival - Top of Pharmacy</title>
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header>
+  <h1>🧟 Zombie Survival</h1>
+  <button id="restart-btn" class="small-red-btn">Restart Game</button>
+  <table class="inventory-table">
+    <tr><th>Coins</th><th>Keys</th><th>Weapon Cards</th></tr>
+    <tr>
+      <td id="coins">0</td>
+      <td id="keys">0</td>
+      <td id="weaponCards">0</td>
+    </tr>
+  </table>
+</header>
+
+<main class="scene active">
+  <div class="intro-box" id="scene-text">
+    <h2>Top of Pharmacy</h2>
+    <p id="description"></p>
+    <div class="choices" id="choices-container"></div>
+  </div>
+</main>
+
+<script>
+// Restart button
+document.getElementById('restart-btn').onclick = function() {
+  localStorage.clear();
+  location.href = "index.html";
+};
+
+if(!localStorage.getItem('coins')) localStorage.setItem('coins','0');
+if(!localStorage.getItem('keys')) localStorage.setItem('keys','0');
+if(!localStorage.getItem('weaponCards')) localStorage.setItem('weaponCards','0');
+
+function updateInventoryDisplay() {
+  document.getElementById('coins').textContent = localStorage.getItem('coins');
+  document.getElementById('keys').textContent = localStorage.getItem('keys');
+  document.getElementById('weaponCards').textContent = localStorage.getItem('weaponCards');
+}
+
+function addChoice(text, href){
+  const container = document.getElementById('choices-container');
+  const a = document.createElement('a');
+  a.href = href;
+  a.className = "button";
+  a.textContent = text;
+  container.appendChild(a);
+}
+
+window.onload = function(){
+  updateInventoryDisplay();
+  const container = document.getElementById('choices-container');
+  container.innerHTML = "";
+  const description = document.getElementById('description');
+
+  description.textContent = "You climb the ladder from the pharmacy roof. The city stretches beneath you, eerily quiet. A helicopter waits nearby, its rotors spinning, but something feels off...";
+
+  description.innerHTML += "<br><br>You can choose to enter the helicopter and escape, or stay and reconsider your options.";
+
+  addChoice("Enter the helicopter", "scene12.html");
+  addChoice("Go back to the streets", "scene9.html");
+};
+</script>
+</body>
+</html>

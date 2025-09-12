@@ -10,11 +10,10 @@
 ## Table of Contents
 1. [Overview](#overview)
 2. [Goals / Features](#goals--features)
-3. [Demo / Screenshots](#demo--screenshots)
-4. [How to Run](#how-to-run)
-5. [Code Structure](#code-structure)
-6. [Next Steps / Improvements](#next-steps--improvements)
-7. [Notes](#notes)
+3. [How to Run](#how-to-run)
+4. [Code Structure](#code-structure)
+5. [Next Steps / Improvements](#next-steps--improvements)
+6. [Notes](#notes)
 
 ---
 

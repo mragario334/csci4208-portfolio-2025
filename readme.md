@@ -32,7 +32,7 @@
 | Lab-03 — Bootstrap: Responsive Portfolio [#3](https://github.com/mragario334/csci4208-portfolio-2025/issues/3) | `lab-03` | completed |
 | Lab-04 — JavaScript Basics: Hi–Lo Game (MVP → MVC) [#6](https://github.com/mragario334/csci4208-portfolio-2025/issues/6) | `lab-04` | completed |
 | Lab-05 — JavaScript OOP + Phaser: Dodger Game [#7](https://github.com/mragario334/csci4208-portfolio-2025/issues/7) | `lab-05` | completed |
-| Project-0 — Set up Repo, Project Board, Actions & Pages [#8](https://github.com/mragario334/csci4208-portfolio-2025/issues/8) | `project-00` | open |
+| Project-0 — Set up Repo, Project Board, Actions & Pages [#8](https://github.com/mragario334/csci4208-portfolio-2025/issues/8) | `project-00` | approved |
 | Project-01 — Interactive Game in HTML & CSS [#4](https://github.com/mragario334/csci4208-portfolio-2025/issues/4) | `project-01` | approved |
 <!-- STATUS:END -->
 

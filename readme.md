@@ -31,20 +31,6 @@
 | Lab-02 — CSS: Crash Course [#2](https://github.com/mragario334/csci4208-portfolio-2025/issues/2) | `lab-02` | completed |
 | Lab-03 — Bootstrap: Responsive Portfolio [#3](https://github.com/mragario334/csci4208-portfolio-2025/issues/3) | `lab-03` | completed |
 | Lab-04 — JavaScript Basics: Hi–Lo Game (MVP → MVC) [#6](https://github.com/mragario334/csci4208-portfolio-2025/issues/6) | `lab-04` | completed |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#26](https://github.com/mragario334/csci4208-portfolio-2025/issues/26) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#25](https://github.com/mragario334/csci4208-portfolio-2025/issues/25) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#24](https://github.com/mragario334/csci4208-portfolio-2025/issues/24) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#23](https://github.com/mragario334/csci4208-portfolio-2025/issues/23) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#22](https://github.com/mragario334/csci4208-portfolio-2025/issues/22) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#21](https://github.com/mragario334/csci4208-portfolio-2025/issues/21) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#20](https://github.com/mragario334/csci4208-portfolio-2025/issues/20) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#19](https://github.com/mragario334/csci4208-portfolio-2025/issues/19) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#18](https://github.com/mragario334/csci4208-portfolio-2025/issues/18) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#17](https://github.com/mragario334/csci4208-portfolio-2025/issues/17) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#16](https://github.com/mragario334/csci4208-portfolio-2025/issues/16) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#15](https://github.com/mragario334/csci4208-portfolio-2025/issues/15) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#14](https://github.com/mragario334/csci4208-portfolio-2025/issues/14) | `lab-05` | open |
-| Lab-05 — JavaScript OOP + Phaser: Dodger Game [#9](https://github.com/mragario334/csci4208-portfolio-2025/issues/9) | `lab-05` | open |
 | Lab-05 — JavaScript OOP + Phaser: Dodger Game [#7](https://github.com/mragario334/csci4208-portfolio-2025/issues/7) | `lab-05` | completed |
 | Lab-06 — REST Client: Quiz Game + Leaderboard (Modules + Fetch) [#10](https://github.com/mragario334/csci4208-portfolio-2025/issues/10) | `lab-06` | closed |
 | Lab-07 — Browser Data Layer: Mock Document DB [#28](https://github.com/mragario334/csci4208-portfolio-2025/issues/28) | `lab-07` | open |

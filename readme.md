@@ -33,7 +33,7 @@
 | Lab-04 — JavaScript Basics: Hi–Lo Game (MVP → MVC) [#6](https://github.com/mragario334/csci4208-portfolio-2025/issues/6) | `lab-04` | completed |
 | Lab-05 — JavaScript OOP + Phaser: Dodger Game [#7](https://github.com/mragario334/csci4208-portfolio-2025/issues/7) | `lab-05` | completed |
 | Lab-06 — REST Client: Quiz Game + Leaderboard (Modules + Fetch) [#10](https://github.com/mragario334/csci4208-portfolio-2025/issues/10) | `lab-06` | completed |
-| Lab-07 — Browser Data Layer: Mock Document DB [#28](https://github.com/mragario334/csci4208-portfolio-2025/issues/28) | `lab-07` | open |
+| Lab-07 — Browser Data Layer: Mock Document DB [#28](https://github.com/mragario334/csci4208-portfolio-2025/issues/28) | `lab-07` | completed |
 | Project-0 — Set up Repo, Project Board, Actions & Pages [#8](https://github.com/mragario334/csci4208-portfolio-2025/issues/8) | `project-00` | approved |
 | Project-01 — Interactive Game in HTML & CSS [#4](https://github.com/mragario334/csci4208-portfolio-2025/issues/4) | `project-01` | approved |
 | Project-02 — Sprint 3: Full Feature Set & Polish [#13](https://github.com/mragario334/csci4208-portfolio-2025/issues/13) | `project-02` | open |

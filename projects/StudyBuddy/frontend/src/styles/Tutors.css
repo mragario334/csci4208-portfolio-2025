@@ -1,0 +1,89 @@
+/* Tutors.css */
+
+.tutors-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .tutors-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.8rem;
+  }
+  
+  .tutor-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tutor-item {
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .tutor-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+  
+  .tutor-item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    color: #007bff;
+  }
+  
+  .tutor-item p {
+    margin: 0.25rem 0;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  .tutor-item strong {
+    color: #333;
+  }
+  
+  @media (max-width: 600px) {
+    .tutors-container {
+      padding: 1rem;
+    }
+  
+    .tutor-item h3 {
+      font-size: 1.1rem;
+    }
+  
+    .tutor-item p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Schedule Button */
+.tutor-item button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.tutor-item button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.tutor-item button:active {
+  transform: translateY(0);
+}

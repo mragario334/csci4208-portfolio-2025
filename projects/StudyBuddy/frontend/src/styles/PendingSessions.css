@@ -1,0 +1,65 @@
+.pending-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .pending-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .pending-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pending-item {
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .pending-item p {
+    margin: 0.25rem 0;
+    color: #555;
+  }
+  
+  .pending-actions {
+    margin-top: 0.5rem;
+  }
+  
+  .approve-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .deny-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .approve-btn:hover {
+    background-color: #218838;
+  }
+  
+  .deny-btn:hover {
+    background-color: #c82333;
+  }
+  

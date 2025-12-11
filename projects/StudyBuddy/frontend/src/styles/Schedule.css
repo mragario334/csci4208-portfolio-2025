@@ -1,0 +1,68 @@
+.schedule-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .schedule-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #007bff;
+    font-size: 1.8rem;
+  }
+  
+  .schedule-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .schedule-form label {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .schedule-form input,
+  .schedule-form select,
+  .schedule-form textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    margin-top: 0.3rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .schedule-form textarea {
+    resize: vertical;
+  }
+  
+  .schedule-btn {
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .schedule-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 600px) {
+    .schedule-container {
+      padding: 1rem;
+    }
+  
+    .schedule-container h2 {
+      font-size: 1.4rem;
+    }
+  }
+  

@@ -1,0 +1,110 @@
+.sessions-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.sessions-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.session-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.session-item {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.session-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.session-info p {
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+/* ========================= */
+/* BUTTONS (Tutor + Student) */
+/* ========================= */
+
+.approve-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.approve-btn:hover {
+  background-color: #218838;
+}
+
+.decline-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.decline-btn:hover {
+  background-color: #c82333;
+}
+
+/* Vertical button stack for tutor actions */
+.button-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-left: 1rem;
+}
+
+/* Compact button style */
+.small-btn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  width: 90px;     
+  text-align: center;
+}
+
+/* ========================= */
+/* STATUS COLORS ON LEFT BAR */
+/* ========================= */
+
+.session-item.scheduled {
+  border-left: 5px solid #007bff;
+}
+
+.session-item.completed {
+  border-left: 5px solid #28a745;
+}
+
+.session-item.cancelled {
+  border-left: 5px solid #dc3545;
+}
+
+.session-item.denied {
+  border-left: 5px solid #6c757d;
+}
+
+.session-item.pending {
+  border-left: 5px solid #ffc107;
+}
